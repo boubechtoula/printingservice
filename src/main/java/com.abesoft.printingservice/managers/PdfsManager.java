@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(value = "session")
-public class JobsManager {
+public class PdfsManager {
 
  public String test() {
   return "helow world !";
