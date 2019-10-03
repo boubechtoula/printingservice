@@ -1,0 +1,1 @@
+Pour les images + fichier de config + le fichier jasper d"un type de pdf : je les stock dans le système de fichiers de ce micro-service, à travers l'interface "Ecran de paramétrage d'un nouveau type de PDF".  ensuite quand l'invocation de l'api rest 
