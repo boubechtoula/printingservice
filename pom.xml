@@ -12,9 +12,11 @@
        </parent>
        <groupId>com.abesoft.printingservice</groupId>
        <artifactId>printing-service-web</artifactId>
+       <packaging>war</packaging>
        <version>0.0.1-SNAPSHOT</version>
        <name>printing-service-web</name>
        <description>printing-service-web</description>
+      
 
        <properties>
              <java.version>1.8</java.version>
