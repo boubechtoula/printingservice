@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmlParams>
+    <paramLoginElem>
+        <param_password>root</param_password>
+    </paramLoginElem>
+</xmlParams>
