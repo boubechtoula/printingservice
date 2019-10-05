@@ -1,7 +1,7 @@
 package com.abesoft.printingservice.managers;
 
-import com.abesoft.printingservice.managers.ParamsManager;
 import com.abesoft.printingservice.utils.ParametersParser;
+import com.abesoft.printingservice.utils.W2WConst;
 import com.abesoft.printingservice.utils.XmlParams;
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,7 +16,6 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import org.springframework.context.annotation.Scope;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -61,7 +60,7 @@ public class ParamsManager {
     }
 
     private File getparamsXMl() throws IOException {
-        File file = new ClassPathResource("params/params.xml").getFile();
+        File file = new File(W2WConst.getRootFolderPath() + File.separator + W2WConst.PARAMS_FILE);
         if (!file.exists()) {
             File fd = new File(ParametersParser.class.getClassLoader().getResource("params/params.xml").getFile());
             file.createNewFile();

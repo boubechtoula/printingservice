@@ -1,6 +1,5 @@
 package com.abesoft.printingservice.utils;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,7 +9,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
 
 /**
  *
@@ -34,8 +32,7 @@ public class ParametersParser {
 
         if (xmlConst == null) {
             try {
-                File file = new ClassPathResource("params/params.xml").getFile();
-
+                File file = new File(W2WConst.getRootFolderPath() + File.separator + W2WConst.PARAMS_FILE);
                 if (!file.exists()) {
                     file = new File(ParametersParser.class.getClassLoader().getResource("params/params.xml").getFile());
                 }
@@ -53,7 +50,7 @@ public class ParametersParser {
     public static void exportXMLfile() throws IOException {
 
         try {
-            File toFile = new ClassPathResource("params/params.xml").getFile();
+            File toFile = new File(W2WConst.getRootFolderPath() + File.separator + W2WConst.PARAMS_FILE);
             if (!toFile.exists()) {
                 String from = ParametersParser.class.getClassLoader().getResource("params/params.xml").getPath();
                 Files.copy(Paths.get(from), toFile.toPath());
